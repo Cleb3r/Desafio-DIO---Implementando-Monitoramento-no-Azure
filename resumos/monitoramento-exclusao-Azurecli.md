@@ -20,3 +20,8 @@ az monitor activity-log alert create \
   --action-group alertaVM
 ```
 > Substitua SUBSCRIPTION_ID pelo seu ID de assinatura (use az account show para descobrir)
+
+## 3. Visualizar Alertas Criados
+```
+az monitor activity-log alert list --output table
+```
