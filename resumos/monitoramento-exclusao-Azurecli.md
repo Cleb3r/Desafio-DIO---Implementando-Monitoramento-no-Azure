@@ -11,11 +11,12 @@ az monitor action-group create \
   --action email alertaEmail SEU_EMAIL@exemplo.com
 ```
 ## 2. Criar Regra de Alerta para Exclusão de VM
+```
 az monitor activity-log alert create \
   --name alertaExclusaoVM \
   --resource-group MeuGrupoDeRecursos \
   --scopes /subscriptions/SUBSCRIPTION_ID \
   --condition "category=Administrative and operationName=Delete Virtual Machine" \
   --action-group alertaVM
-
+```
 > Substitua SUBSCRIPTION_ID pelo seu ID de assinatura (use az account show para descobrir)
