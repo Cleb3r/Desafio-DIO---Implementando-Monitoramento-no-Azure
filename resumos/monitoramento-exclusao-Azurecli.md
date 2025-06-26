@@ -4,11 +4,11 @@ Este documento mostra como criar um alerta baseado no log de atividade usando Az
 
 ## 1. Criar Grupo de Ação com Notificação
 
-az monitor action-group create \
+~~~az monitor action-group create \
   --resource-group MeuGrupoDeRecursos \
   --name acaoAlertaVM \
   --short-name alertaVM \
-  --action email alertaEmail SEU_EMAIL@exemplo.com
+  --action email alertaEmail SEU_EMAIL@exemplo.com~~~
 
 ## 2. Criar Regra de Alerta para Exclusão de VM
 az monitor activity-log alert create \
