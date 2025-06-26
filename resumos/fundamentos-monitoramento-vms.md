@@ -31,3 +31,20 @@ AzureActivity
 | where OperationName == "Delete Virtual Machine"
 | where ActivityStatusValue == "Succeeded"
 | project TimeGenerated, ResourceGroup, Caller, OperationName
+```
+
+## 🧩 Boas Práticas
+  * Habilitar diagnóstico em todos os recursos importantes
+
+  * Armazenar logs no Log Analytics para consultas históricas
+
+  * Configurar alertas para ações administrativas sensíveis
+
+  * Usar **Action Groups** com múltiplos canais (e-mail + webhook)
+
+## 📝 Recomendações
+  * 🔐 Monitorar operações como delete, start, stop, update
+
+  * 💬 Documentar alertas críticos no repositório de governança
+
+  * 📦 Utilizar políticas Azure Policy para garantir que logs estejam habilitados por padrão
