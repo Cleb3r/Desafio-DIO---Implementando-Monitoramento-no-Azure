@@ -25,3 +25,11 @@ az monitor activity-log alert create \
 ```
 az monitor activity-log alert list --output table
 ```
+## 4. Verificar logs de exclusão de VM manualmente (consulta direta)
+```
+az monitor activity-log list \
+  --resource-group MeuGrupoDeRecursos \
+  --status "Succeeded" \
+  --offset 1d \
+  --query "[?operationName.value=='Microsoft.Compute/virtualMachines/delete']"
+```
